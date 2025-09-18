@@ -18,8 +18,9 @@
 </head>
 <body class="bg-white font-sans text-gray-800">
 
-  <!-- Header -->
-  <header class="bg-white shadow p-4 flex items-center justify-between">
+<!-- Header -->
+<header class="bg-white shadow p-4">
+  <div class="flex items-center justify-between">
     <div class="flex items-center gap-4">
       <img src="https://angkringanstm.github.io/assets/angkringanstm.jpg"
            alt="Logo Angkringan STM"
@@ -45,7 +46,36 @@
       </svg>
       WhatsApp
     </a>
-  </header>
+  </div>
+
+  <!-- Alert Notifikasi -->
+  <div id="notif"
+       class="hidden mt-3 bg-red-100 text-red-700 text-center px-4 py-2 rounded-lg font-semibold">
+    ⚠️ Hari ini <span id="tanggal"></span> Angkringan STM <strong>TUTUP</strong>.  
+    Ganti jadwal: <span class="text-green-700">Hari Selasa BUKA</span>.
+  </div>
+</header>
+
+<script>
+  // Data notifikasi
+  const notifDate = new Date("2025-09-18"); // Kamis, 18 Sept 2025
+  const today = new Date();
+
+  // Format tanggal Indonesia
+  const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+  const tanggalIndo = today.toLocaleDateString("id-ID", options);
+
+  // Jika hari ini = 18 Sept 2025 → tampilkan alert
+  if (
+    today.getFullYear() === notifDate.getFullYear() &&
+    today.getMonth() === notifDate.getMonth() &&
+    today.getDate() === notifDate.getDate()
+  ) {
+    document.getElementById("notif").classList.remove("hidden");
+    document.getElementById("tanggal").textContent = tanggalIndo;
+  }
+</script>
+
 
   <!-- Hero -->
 <section class="text-center py-12 px-4 bg-orange-50">
@@ -182,32 +212,7 @@
 
     <p class="text-sm text-gray-600 mt-4">© <span id="year"></span> Angkringan STM</p>
   </footer>
-<!-- Notifikasi -->
-<div id="notif"
-     class="hidden bg-red-100 text-red-700 px-4 py-3 text-center font-semibold">
-  ⚠️ Hari ini <span id="tanggal"></span> Angkringan STM TUTUP.  
-  Ganti jadwal: <span class="text-green-700">Hari Selasa BUKA</span>.
-</div>
 
-<script>
-  // Data notifikasi
-  const notifDate = new Date("2025-09-18"); // Kamis, 18 Sept 2025
-  const today = new Date();
-
-  // Format tanggal Indo
-  const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
-  const tanggalIndo = today.toLocaleDateString("id-ID", options);
-
-  // Kalau tanggal hari ini sama dengan notifDate → tampilkan notifikasi
-  if (
-    today.getFullYear() === notifDate.getFullYear() &&
-    today.getMonth() === notifDate.getMonth() &&
-    today.getDate() === notifDate.getDate()
-  ) {
-    document.getElementById("notif").classList.remove("hidden");
-    document.getElementById("tanggal").textContent = tanggalIndo;
-  }
-</script>
 
   <script>
     // Isi tahun otomatis
