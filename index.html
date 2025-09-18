@@ -1,41 +1,61 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Angkringan STM</title>
-<link rel="icon" href="https://fayzanina.github.io/assets/favicon-32x32.png" type="image/x-icon" />
+  <link rel="icon" href="https://angkringanstm.github.io/assets/favicon-32x32.png" type="image/x-icon" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Angkringan STM" />
   <meta property="og:description" content="Tempat nongkrong favorit anak STM. Nikmati suasana santai dan menu khas angkringan!" />
-  <meta property="og:image" content="https://fayzanina.github.io/assets/favicon-32x32.png" />
-  <meta property="og:url" content="https://fayzanina.github.io/angkringanstm.html" />
+  <meta property="og:image" content="https://angkringanstm.github.io/assets/favicon-32x32.png" />
+  <meta property="og:url" content="https://angkringanstm.github.io/" />
   <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white font-sans text-gray-800">
+
   <!-- Header -->
   <header class="bg-white shadow p-4 flex items-center justify-between">
-    <div class="flex items-center space-x-4">
-      <img src="https://angkringanstm.github.io/assets/angkringanstm.jpg" 
-           alt="Logo Angkringan STM" 
+    <div class="flex items-center gap-4">
+      <img src="https://angkringanstm.github.io/assets/angkringanstm.jpg"
+           alt="Logo Angkringan STM"
            class="w-14 h-14 rounded-full object-cover border-2 border-orange-500" />
       <h1 class="text-2xl font-bold text-orange-600">Angkringan STM</h1>
     </div>
-    <a href="https://whatsapp.com/channel/0029Vb6Q7YW4dTnBTAzbbN3V" target="_blank"
-       class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow">
+
+    <a href="https://whatsapp.com/channel/0029Vb6Q7YW4dTnBTAzbbN3V"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Channel WhatsApp Angkringan STM"
+       class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow">
+      <!-- Ikon WhatsApp kecil di header -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+           class="icon icon-tabler icon-tabler-brand-whatsapp">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+        <path d="M9 10a.5.5 0 0 0 1 0v-1a.5.5 0 0 0 -1 0v1
+                 a5 5 0 0 0 5 5h1a.5.5 0 0 0 0 -1h-1
+                 a.5.5 0 0 0 0 1" />
+      </svg>
       WhatsApp
     </a>
   </header>
 
-  <!-- Hero Section -->
-  <section class="text-center py-10 px-4 bg-orange-50">
+  <!-- Hero -->
+  <section class="text-center py-12 px-4 bg-orange-50">
     <h2 class="text-3xl font-bold text-orange-700 mb-2">Selamat Datang di Angkringan STM</h2>
     <p class="text-gray-700 max-w-xl mx-auto">Tempat nongkrong favorit anak STM. Nikmati makanan khas angkringan dengan harga bersahabat dan suasana santai penuh nostalgia.</p>
     <img src="https://cdn-icons-png.flaticon.com/512/2859/2859724.png" alt="Free Wi-Fi" class="w-12 mx-auto mt-4" />
     <p class="text-sm text-gray-500 mt-2">Free Wi-Fi tersedia!</p>
   </section>
 
-  <!-- Menu Section -->
+  <!-- Menu -->
   <section class="py-10 px-4">
     <h3 class="text-2xl font-semibold text-center text-gray-800 mb-6">Menu Favorit</h3>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -73,11 +93,11 @@
     </div>
   </section>
 
-  <!-- Lokasi dan Jam -->
+  <!-- Lokasi & Jam -->
   <section class="py-10 px-4 text-center">
     <h3 class="text-xl font-semibold mb-2">📍 Lokasi</h3>
     <a href="https://www.google.com/maps/dir//Jl.+Raya+Tanggul+-+Semboro,+Krajan,+Tanggul+Wetan,+Kec.+Tanggul,+Kabupaten+Jember,+Jawa+Timur+68155/@-8.1712564,113.3684998,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2dd68b6b4b0ae9c5:0x545ad9bf5829809f!2m2!1d113.4509157!2d-8.1712659?entry=ttu"
-       target="_blank" class="text-blue-600 underline">Jl. Raya Tanggul - Semboro, Jember</a>
+       target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">Jl. Raya Tanggul - Semboro, Jember</a>
 
     <h3 class="text-xl font-semibold mt-6 mb-2">⏰ Jam Operasional</h3>
     <div class="text-gray-700 leading-relaxed">
@@ -85,23 +105,70 @@
       <p><strong>Sore:</strong> 15.00 – 17.00 <span class="text-sm text-gray-500">(Minggu sore libur)</span></p>
       <p><strong>Malam:</strong> 18.30 – 00.30 <span class="text-sm text-green-600">(Setiap malam BUKA, termasuk Minggu!)</span></p>
     </div>
-<p class="text-md mt-4 text-orange-700 font-semibold">📺 Jika ada event, Angkringan STM juga menyediakan NOBAR sepak bola!</p>
+    <p class="text-md mt-4 text-orange-700 font-semibold">📺 Jika ada event, Angkringan STM juga menyediakan NOBAR sepak bola!</p>
   </section>
 
-  <!-- Sosial Media -->
-  <footer class="bg-orange-100 text-center p-4">
-    <p class="text-gray-700 font-medium mb-2">Ikuti kami di sosial media:</p>
-    <div class="flex justify-center gap-4">
-      <a href="https://tiktok.com/@angkringan.stm" target="_blank" class="hover:scale-110 transition">
-        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok" class="w-6" />
+  <!-- Footer -->
+  <footer class="bg-orange-100 text-center p-6">
+    <p class="text-gray-700 font-medium mb-4">Ikuti kami di sosial media:</p>
+    <div class="flex justify-center gap-6 text-gray-700">
+      <!-- TikTok -->
+      <a href="https://tiktok.com/@angkringan.stm"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="TikTok Angkringan STM"
+         class="hover:text-black transition">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             class="icon icon-tabler icon-tabler-brand-tiktok">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5
+                   a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0
+                   4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
+        </svg>
       </a>
-      <a href="https://instagram.com/angkringanstm" target="_blank" class="hover:scale-110 transition">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="w-6" />
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/angkringanstm"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Instagram Angkringan STM"
+         class="hover:text-pink-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             class="icon icon-tabler icon-tabler-brand-instagram">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0
+                   1 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+          <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+          <path d="M16.5 7.5v.01" />
+        </svg>
       </a>
-      <a href="https://whatsapp.com/channel/0029Vb6Q7YW4dTnBTAzbbN3V" target="_blank" class="hover:scale-110 transition">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="w-6" />
+
+      <!-- WhatsApp -->
+      <a href="https://whatsapp.com/channel/0029Vb6Q7YW4dTnBTAzbbN3V"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="WhatsApp Angkringan STM"
+         class="hover:text-green-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             class="icon icon-tabler icon-tabler-brand-whatsapp">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+          <path d="M9 10a.5.5 0 0 0 1 0v-1a.5.5 0 0 0 -1 0v1
+                   a5 5 0 0 0 5 5h1a.5.5 0 0 0 0 -1h-1
+                   a.5.5 0 0 0 0 1" />
+        </svg>
       </a>
     </div>
+
+    <p class="text-sm text-gray-600 mt-4">© <span id="year"></span> Angkringan STM</p>
   </footer>
+
+  <script>
+    // Isi tahun otomatis
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
