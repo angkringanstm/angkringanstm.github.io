@@ -182,6 +182,32 @@
 
     <p class="text-sm text-gray-600 mt-4">© <span id="year"></span> Angkringan STM</p>
   </footer>
+<!-- Notifikasi -->
+<div id="notif"
+     class="hidden bg-red-100 text-red-700 px-4 py-3 text-center font-semibold">
+  ⚠️ Hari ini <span id="tanggal"></span> Angkringan STM TUTUP.  
+  Ganti jadwal: <span class="text-green-700">Hari Selasa BUKA</span>.
+</div>
+
+<script>
+  // Data notifikasi
+  const notifDate = new Date("2025-09-18"); // Kamis, 18 Sept 2025
+  const today = new Date();
+
+  // Format tanggal Indo
+  const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+  const tanggalIndo = today.toLocaleDateString("id-ID", options);
+
+  // Kalau tanggal hari ini sama dengan notifDate → tampilkan notifikasi
+  if (
+    today.getFullYear() === notifDate.getFullYear() &&
+    today.getMonth() === notifDate.getMonth() &&
+    today.getDate() === notifDate.getDate()
+  ) {
+    document.getElementById("notif").classList.remove("hidden");
+    document.getElementById("tanggal").textContent = tanggalIndo;
+  }
+</script>
 
   <script>
     // Isi tahun otomatis
