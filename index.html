@@ -76,8 +76,7 @@
   }
 </script>
 
-
-  <!-- Hero -->
+<!-- Hero -->
 <section class="text-center py-12 px-4 bg-orange-50">
   <h2 class="text-3xl font-bold text-orange-700 mb-2">Selamat Datang di Angkringan STM</h2>
   <p class="text-gray-700 max-w-xl mx-auto">
@@ -99,8 +98,34 @@
   </div>
 
   <p class="text-sm text-gray-500 mt-2">Free Wi-Fi tersedia!</p>
-</section>
 
+  <!-- 🎬 HLS Player -->
+  <div class="max-w-3xl mx-auto mt-8">
+    <video id="livePlayer" class="w-full rounded-xl shadow-lg border border-orange-200" controls autoplay muted playsinline></video>
+  </div>
+
+  <!-- Script HLS.js -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script>
+    const video = document.getElementById('livePlayer');
+    const hlsUrl = 'https://saputra.fzstream.com/stream/24/chunks.m3u8?token=saputra-a0794070-112b-4fa1-a35b-e3e76b5e95d4&is_vip=true&verify=1760210760-%2Fjplj2slErnY0Jx2J04cX0%2FJW8zqZyY6zpU%2FBw9JVU4%3D';
+
+    if (Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(hlsUrl);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, function() {
+        video.play();
+      });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      // Safari / iOS native HLS
+      video.src = hlsUrl;
+      video.addEventListener('loadedmetadata', () => video.play());
+    } else {
+      document.querySelector('.max-w-3xl').innerHTML = '<p class="text-red-600 font-semibold mt-4">Browser tidak mendukung HLS streaming 😢</p>';
+    }
+  </script>
+</section>
 
   <!-- Menu -->
   <section class="py-10 px-4">
@@ -219,4 +244,4 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
-</html>
+</html
